@@ -60,7 +60,7 @@
 
         .inner-table td {
             border: none;
-            padding: 1px 0;
+            padding: 1px 2px;
             font-size: 9pt;
             vertical-align: top;
         }
@@ -76,7 +76,7 @@
            FOOTER STYLES
            ======================================== */
         tfoot td {
-            padding: 4px 4px;
+            padding: 3px 4px;
         }
 
         /* ========================================
@@ -120,85 +120,72 @@
 
     <!-- ================= HEADER ================= -->
     <thead>
-        <!-- Row 1: Logo + Company Info + QR Code -->
+        <!-- Row 1: Company Header -->
         <tr>
-            <td colspan="1" class="text-left" style="width:4%;">
-                <span class="bold">#CompanyLogo#</span>
-            </td>
-            <td colspan="5" class="text-center" style="width:37%;">
+            <td colspan="7" class="text-center small" style="padding:6px 4px;">
                 <div class="bold">#Company#</div>
                 <div class="small">#BranchAddress#</div>
                 <div class="small">TEL : #Phone#</div>
-                <div class="small">Email : #Email#</div>
-            </td>
-            <td colspan="3" class="text-right" style="width:59%;">
-                #QRCode#
+                <div class="small">EMAIL : #Email#</div>
             </td>
         </tr>
 
-        <!-- Row 2: TAX INVOICE Label -->
+        <!-- Row 2: TAX INVOICE + Original for Recipient -->
         <tr>
-            <td colspan="9" class="text-center bold">
-                TAX INVOICE
-            </td>
+            <td colspan="4" class="text-center bold">TAX INVOICE</td>
+            <td colspan="3" class="text-center small">Original for Recipient</td>
         </tr>
 
         <!-- Row 3: Invoice Details (Left) + Logistics (Right) -->
         <tr>
             <!-- Left: Invoice Details -->
-            <td colspan="1" class="text-left small" style="width:4%; padding:3px;">
-            </td>
-            <td colspan="4" class="text-left small" style="width:33%; padding:3px;">
+            <td colspan="3" class="text-left small" style="padding:3px;">
                 <table class="inner-table">
                     <tr>
-                        <td style="width:35%;" class="text-left">Tax Inv. No.</td>
-                        <td style="width:65%;" class="text-left"><span class="bold">#vNo#</span></td>
+                        <td class="text-left"><span class="bold">Tax Inv. No.</span></td>
+                        <td class="text-left">: #vNo#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Date</td>
-                        <td class="text-left">#vDate#</td>
+                        <td class="text-left"><span class="bold">Challan No.</span></td>
+                        <td class="text-left">: #OrdNo#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Order No.</td>
-                        <td class="text-left">#OrdNo#</td>
+                        <td class="text-left"><span class="bold">Order No.</span></td>
+                        <td class="text-left">: #OrdNo#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Order Date</td>
-                        <td class="text-left">#OrdDate#</td>
+                        <td class="text-left"><span class="bold">Order Date</span></td>
+                        <td class="text-left">: #OrdDate#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Payment Term</td>
-                        <td class="text-left">#CREDITDAYS# Days</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Due Date</td>
-                        <td class="text-left">#Due Date#</td>
+                        <td class="text-left"><span class="bold">Payment Term</span></td>
+                        <td class="text-left">: #CREDITDAYS#</td>
                     </tr>
                 </table>
             </td>
 
             <!-- Right: Logistics Details -->
-            <td colspan="4" class="text-left small" style="width:63%; padding:3px;">
+            <td colspan="4" class="text-left small" style="padding:3px;">
                 <table class="inner-table">
                     <tr>
-                        <td style="width:35%;" class="text-left">Transporter</td>
-                        <td style="width:65%;" class="text-left">#Transporter#</td>
+                        <td class="text-left"><span class="bold">Date</span></td>
+                        <td class="text-left">: #vDate#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">L.R. No.</td>
-                        <td class="text-left">#LRNo#</td>
+                        <td class="text-left"><span class="bold">Due On</span></td>
+                        <td class="text-left">: #Due Date#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">L.R. Date</td>
-                        <td class="text-left">#LRDate#</td>
+                        <td class="text-left"><span class="bold">Transporter</span></td>
+                        <td class="text-left">: #Transporter#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Place of Supply</td>
-                        <td class="text-left">#State#</td>
+                        <td class="text-left"><span class="bold">L.R. No.</span></td>
+                        <td class="text-left">: #LRNo#</td>
                     </tr>
                     <tr>
-                        <td class="text-left">Eway Bill No.</td>
-                        <td class="text-left">#EwayBillNo#</td>
+                        <td class="text-left"><span class="bold">Place of Supply</span></td>
+                        <td class="text-left">: #State#</td>
                     </tr>
                 </table>
             </td>
@@ -206,51 +193,40 @@
 
         <!-- Row 4: IRN / ACK -->
         <tr>
-            <td colspan="6" class="text-left small bold">
-                IRN: #IRN#
-            </td>
-            <td colspan="3" class="text-right small bold">
-                ACK No: #AckNo#
+            <td colspan="7" class="text-left small bold" style="padding:3px;">
+                IRN : #IRN# &nbsp;&nbsp;&nbsp;&nbsp; ACK No. : #AckNo#
             </td>
         </tr>
 
         <!-- Row 5: Billed To / Shipped To -->
         <tr>
-            <td colspan="1" class="text-left small" style="width:4%; padding:4px; vertical-align:top;">
-            </td>
-            <td colspan="4" class="text-left small" style="width:33%; padding:4px; vertical-align:top;">
-                <span class="bold">Billed To: #Customer#</span><br/>
+            <td colspan="3" class="text-left small" style="padding:4px; vertical-align:top;">
+                <span class="bold">Billed To : #Customer#</span><br/>
                 #BillTo#<br/>
                 State #State Code# - #State#<br/>
-                GSTIN : #GSTNo#<br/>
-                PAN No.: #PAN No.#<br/>
-                Contact: #UDF1#<br/>
-                Mobile: #CustomerMobile#<br/>
-                Email: #CustomerEmail#
+                <span class="bold">GSTIN : #GSTNo#</span><br/>
+                <span class="bold">P.A.No.: #PAN No.#</span><br/>
+                <span class="bold">Contact : #CustomerMobile#</span>
             </td>
-            <td colspan="4" class="text-left small" style="width:63%; padding:4px; vertical-align:top;">
-                <span class="bold">Shipped To: #Customer#</span><br/>
+            <td colspan="4" class="text-left small" style="padding:4px; vertical-align:top;">
+                <span class="bold">Shipped To : #Customer#</span><br/>
                 #ShipTo#<br/>
                 State #State Code# - #State#<br/>
-                GSTIN : #GSTNo#<br/>
-                PAN No.: #PAN No.#<br/>
-                Contact: #UDF1#<br/>
-                Mobile: #CustomerMobile#<br/>
-                Email: #CustomerEmail#
+                <span class="bold">GSTIN : #GSTNo#</span><br/>
+                <span class="bold">P.A.No.: #PAN No.#</span><br/>
+                <span class="bold">Contact : #CustomerMobile#</span>
             </td>
         </tr>
 
         <!-- Row 6: Column Headers for Items -->
         <tr>
-            <th class="text-center small" style="width:4%;">Sr.</th>
-            <th class="text-left small" style="width:33%;">Particulars</th>
-            <th class="text-center small" style="width:8%;">HSN</th>
-            <th class="text-right small" style="width:8%;">Qty</th>
-            <th class="text-center small" style="width:6%;">Per</th>
-            <th class="text-right small" style="width:10%;">Rate</th>
-            <th class="text-right small" style="width:7%;">Disc.%</th>
-            <th class="text-right small" style="width:7%;">Tax%</th>
-            <th class="text-right small" style="width:17%;">Amount</th>
+            <th class="text-center small" style="width:5%;">Sno</th>
+            <th class="text-left small" style="width:40%;">Description of Goods</th>
+            <th class="text-center small" style="width:12%;">HSN/SAC Code</th>
+            <th class="text-right small" style="width:10%;">Quantity</th>
+            <th class="text-right small" style="width:10%;">Rate Per</th>
+            <th class="text-right small" style="width:13%;">Amount</th>
+            <th class="text-right small" style="width:10%;">IGST %</th>
         </tr>
     </thead>
 
@@ -262,92 +238,65 @@
             <td class="text-left small">#ITEMDESCRIPTION#</td>
             <td class="text-center small">#HSN#</td>
             <td class="text-right small">#QTY#</td>
-            <td class="text-center small">#UNIT#</td>
             <td class="text-right small">#RATE#</td>
-            <td class="text-right small">#DISCPER#</td>
-            <td class="text-right small">#GSTPER#</td>
             <td class="text-right small">#LINEAMOUNT#</td>
+            <td class="text-right small">#GSTPER#</td>
         </tr>
     </tbody>
 
     <!-- ================= FOOTER ================= -->
     <tfoot>
-        <!-- Row 1: Amount in Words + Bank Details (Left) vs Subtotal (Right) -->
+        <!-- Row 1: Net Amount + IGST + Gross Amount -->
         <tr>
-            <td rowspan="8" class="text-left small" style="width:4%; vertical-align:top;"></td>
-            <td rowspan="8" colspan="3" class="text-left small" style="width:37%; vertical-align:top;">
-                <span class="bold">Invoice Total Amount (Words):</span><br/>
+            <td colspan="5" class="text-left small" style="vertical-align:top;">
+                <span class="bold">Amount In Words:</span><br/>
                 #Amount In Words#<br/><br/>
                 <span class="bold">Bank Details:</span><br/>
                 #BankDetails#
             </td>
-            <td colspan="2" class="text-right small bold" style="width:16%;">Sub Total</td>
-            <td class="text-right small bold" style="width:17%;">#SubTotal#</td>
+            <td class="text-right small bold">Net Amount</td>
+            <td class="text-right small bold">#SubTotal#</td>
         </tr>
 
-        <!-- Row 2: Discount -->
+        <!-- Row 2: IGST Calculation -->
         <tr>
-            <td colspan="2" class="text-right small bold">Discount</td>
-            <td class="text-right small bold">#TotalItemDiscount#</td>
-        </tr>
-
-        <!-- Row 3: Freight (UDAAmount1) -->
-        <tr>
-            <td colspan="2" class="text-right small bold">Freight</td>
-            <td class="text-right small bold">#UDAAmount1#</td>
-        </tr>
-
-        <!-- Row 4: Packing & Forwarding (UDAAmount2) -->
-        <tr>
-            <td colspan="2" class="text-right small bold">Packing &amp; Forwarding</td>
-            <td class="text-right small bold">#UDAAmount2#</td>
-        </tr>
-
-        <!-- Row 5: CGST -->
-        <tr>
-            <td colspan="2" class="text-right small bold">CGST</td>
-            <td class="text-right small bold">#TotalCGST#</td>
-        </tr>
-
-        <!-- Row 6: SGST -->
-        <tr>
-            <td colspan="2" class="text-right small bold">SGST</td>
-            <td class="text-right small bold">#TotalSGST#</td>
-        </tr>
-
-        <!-- Row 7: IGST -->
-        <tr>
-            <td colspan="2" class="text-right small bold">IGST</td>
+            <td colspan="5" class="text-left small" style="vertical-align:top;"></td>
+            <td class="text-right small bold">IGST @ 18%</td>
             <td class="text-right small bold">#TotalIGST#</td>
         </tr>
 
-        <!-- Row 8: Total Amount -->
+        <!-- Row 3: Gross Amount -->
         <tr>
-            <td colspan="2" class="text-right small bold">Total Amount</td>
+            <td colspan="5" class="text-left small" style="vertical-align:top;"></td>
+            <td class="text-right small bold">Gross Amount</td>
             <td class="text-right small bold">#TotalAmount#</td>
         </tr>
 
-        <!-- Row 9: Company GST/PAN + Terms + Box/Weight + Signatory -->
+        <!-- Row 4: GSTIN + MSME + Terms & Conditions + Signatory -->
         <tr>
-            <td class="text-left small" style="width:4%;"></td>
-            <td colspan="3" class="text-left small" style="width:37%; vertical-align:top;">
-                <span class="bold">GSTIN: #BranchGSTNo#</span><br/>
-                <span class="bold">PAN No.: #CompanyPanNo#</span><br/><br/>
-                <span class="bold">Terms &amp; Conditions:</span><br/>
-                • Subject to VASHI Jurisdiction<br/>
-                • Goods once sold will not be taken back<br/>
-                • Our responsibility ceases once goods leave our premises<br/>
-                • Payment within due date, otherwise 21% p.a. interest charged
+            <td colspan="3" class="text-left small" style="vertical-align:top;">
+                <span class="bold">GSTIN : #BranchGSTNo#</span><br/>
+                <span class="bold">P.A.No.: #CompanyPanNo#</span><br/>
+                <span class="bold">MSME No.: UDYAM-MH-33-0590444</span><br/><br/>
+                <span class="bold">Terms &amp; Conditions :</span><br/>
+                * Subject to VASHI Jurisdiction.<br/>
+                * Goods Once Sold Will not be taken back.<br/>
+                * Our Responsibility ceases as soon as the goods leaves our premises.<br/>
+                * Payment within Due Date otherwise 21% p.a. interest will be charged.
             </td>
-            <td colspan="2" class="text-center small" style="width:16%; vertical-align:top;">
-                <div><span class="bold">Boxes: #Box#</span></div>
-                <div><span class="bold">Weight: #Weight#</span></div>
-            </td>
-            <td class="text-center small" style="width:17%; vertical-align:top;">
-                <div style="font-size:8pt; margin-bottom:6px;">Certified that the particulars given above are true and correct.</div>
-                <div style="margin-top:12px;">
+            <td colspan="2" class="text-center small" style="vertical-align:top;">
+                <div style="margin-top:30px;">
                     <span class="bold">For #Company#</span><br/><br/><br/>
                     <span class="bold">Authorised Signatory</span>
+                </div>
+            </td>
+            <td colspan="2" class="text-center small" style="vertical-align:top;">
+                <div style="font-size:8pt; margin-top:30px;">
+                    Certified that the<br/>
+                    particulars given above<br/>
+                    are true and correct.<br/>
+                    <br/>
+                    <span class="bold">E. & O. E.</span>
                 </div>
             </td>
         </tr>
